@@ -45,7 +45,7 @@ group :development, :test do
   gem 'figaro'
   gem 'pry'
   gem 'rspec-rails', '~> 4.0.1'
-  gem 'rubocop'
+  gem 'rubocop-rails'
 end
 
 group :development do
