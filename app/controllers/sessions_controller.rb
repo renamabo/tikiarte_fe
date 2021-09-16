@@ -10,7 +10,10 @@ class SessionsController < ApplicationController
       }
     }
 
-    user = BackendFacade.method_name(user_info)
+    user = BackendFacade.user(user_info)
+
+    require "pry"; binding.pry
+
     # google_id = auth_hash['uid']
     # email = auth_hash['info']['email']
     # token = auth_hash['credentials']['token']
@@ -18,3 +21,6 @@ class SessionsController < ApplicationController
     # BackendService.register_user(google_id, email, token) # does it make more sense to call the service or facade?
   end
 end
+
+# naming conventions: for services/facades I used similar to Meg's video
+# but we could also say somehting like GoogleUserService, etc.
