@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/mainframe/turing/3module/projects/tikiarte_fe/spec/features/user_artists/index_spec.rb": {
+      "/Users/mainframe/turing/3module/projects/tikiarte_fe/spec/features/user_artists/create_spec.rb": {
         "lines": [
           1,
           null,
@@ -17,8 +17,22 @@
           1,
           null,
           1,
+          null,
           1,
           null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          0,
           null,
           null,
           null
@@ -432,10 +446,17 @@
           1,
           1,
           null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1631989965
+    "timestamp": 1631992496
   }
 }

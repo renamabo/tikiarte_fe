@@ -1,0 +1,2 @@
+class UserArtistsService
+end

@@ -1,3 +1,7 @@
 <div id='header'>
   <h1>My Artists</h1>
 </div>
+
+<div id='button'>
+  <%= button_to 'Add Artist', new_user_artist_path(current_user.id), method: :get %>
+</div>
