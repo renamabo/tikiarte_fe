@@ -5,7 +5,10 @@ RSpec.describe 'Welcome page' do
     expect(page).to have_content('Tikiarté')
     expect(page).to have_content('Welcome to Tikiarté!')
   end
-  xit 'can sign in with a google account' do
+  it 'can sign in with a google account' do
+    visit root_path
+
+    OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
       "provider" => "google_oauth2",
       "uid" => "100000000000000000000",
@@ -17,18 +20,21 @@ RSpec.describe 'Welcome page' do
         :refresh_token => "refresh token"
       }
     })
-    request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
-    visit root_path
+    Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
+
     expect(page).to have_button("Sign in with Google")
     click_button "Sign in with Google"
 
-    expect(current_path).to eq(dashboard_path)
+    expect(current_path).to eq('/user/4')
   end
-  xit 'returns an authentication error when credentials are not valid' do
+  it 'returns an authentication error when credentials are not valid' do
     visit root_path
-    OmniAuth.config.mock_auth[:google_oauth2] = :invalid_credentials
 
-    click_link "Sign in"
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:google_oauth2] = :invalid_credentials
+    Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
+
+    click_button "Sign in with Google"
     expect(page).to have_content('Authentication failed.')
   end
 end

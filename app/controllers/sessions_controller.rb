@@ -1,12 +1,18 @@
 class SessionsController < ApplicationController
   def create
     auth_hash = request.env['omniauth.auth']
-    user_info = {
-        google_id: auth_hash['uid'],
-        email: auth_hash['info']['email'],
-        token: auth_hash['credentials']['token']
-    }
-    user = BackendFacade.user(user_info)
-    session[:user] = user.id
+    if auth_hash == :invalid_credentials
+      flash[:error] = "Authentication failed."
+      redirect_to root_path
+    else
+      user_info = {
+          google_id: auth_hash['uid'],
+          email: auth_hash['info']['email'],
+          token: auth_hash['credentials']['token']
+        }
+      user = BackendFacade.user(user_info)
+      session[:user] = user.id
+      redirect_to user_path(user.id)
+    end
   end
 end
