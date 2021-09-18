@@ -45,6 +45,12 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails', '~> 4.0.1'
   gem 'rubocop-rails'
+  gem 'capybara'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'launchy'
+  gem 'orderly'
+  gem 'shoulda-matchers'
 end
 
 group :development do
@@ -54,12 +60,6 @@ group :development do
 end
 
 group :test do
-  gem 'capybara'
-  gem 'factory_bot_rails'
-  gem 'faker'
-  gem 'launchy'
-  gem 'orderly'
-  gem 'shoulda-matchers'
   gem 'simplecov'
   gem 'vcr'
   gem 'webmock'

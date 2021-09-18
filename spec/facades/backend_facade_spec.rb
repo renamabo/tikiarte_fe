@@ -1,5 +1,6 @@
 require 'rails_helper'
-describe BackendFacade do
+
+RSpec.describe BackendFacade do
   it 'can return a new google user' do
     VCR.use_cassette('backend_user') do
       user_info = { google_id: 1, email: 'none@noemail.com', token: '100' }

@@ -1,5 +1,6 @@
 require 'rails_helper'
-describe GoogleUser do
+
+RSpec.describe GoogleUser do
   it 'can create a new google user with attributes' do
     user_hash = {:id=>"3", :type=>"director", :attributes=>{:email=>"none@noemail.com", :token=>"100", :google_id=>"1"}}
     user_object = GoogleUser.new(user_hash)

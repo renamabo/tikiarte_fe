@@ -15,7 +15,7 @@ jobs:
       - ruby/bundle-install
       - run:
           name: run test suite
-          command: bundle exec rake spec
+          command: bundle exec rspec -fd
       - run:
           name: run rubocop linter
           command: bundle exec rubocop

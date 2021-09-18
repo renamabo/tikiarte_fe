@@ -1,5 +1,6 @@
 require 'rails_helper'
-describe BackendService do
+
+RSpec.describe BackendService do
   it 'can send user credentials to post and return user info' do
     VCR.use_cassette('backend_user') do
       user_info = { google_id: 1, email: 'none@noemail.com', token: '100' }

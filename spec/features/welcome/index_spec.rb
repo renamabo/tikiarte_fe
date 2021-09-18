@@ -1,4 +1,5 @@
 require 'rails_helper'
+
 RSpec.describe 'Welcome page' do
   it 'has the app name and welcome message' do
     visit root_path
