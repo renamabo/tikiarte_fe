@@ -7,6 +7,7 @@
 # files.
 require 'webmock/rspec'
 require 'simplecov'
+require 'omniauth'
 SimpleCov.start
 # Given that it is always loaded, you are encouraged to keep this file as
 # light-weight as possible. Requiring heavyweight dependencies from this file
@@ -96,3 +97,4 @@ RSpec.configure do |config|
   #   # as the one that triggered the failure.
   #   Kernel.srand config.seed
 end
+OmniAuth.config.test_mode = true
