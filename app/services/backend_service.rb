@@ -4,7 +4,10 @@ class BackendService
   end
 
   def self.create_or_find_user(user_info)
-    response = connection.post('/api/v1/users', user_info)
+    response = connection.post('/api/v1/sessions/create') do |req|
+      req.headers['Content-Type'] = 'application/json'
+      req.body = {director: user_info}.to_json
+    end
     JSON.parse(response.body, symbolize_names: true)
   end
 

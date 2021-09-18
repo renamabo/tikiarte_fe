@@ -38,6 +38,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap'
 gem 'faraday'
 gem 'omniauth-google-oauth2'
+gem 'execjs'
+gem 'nodejs-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -45,6 +47,12 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails', '~> 4.0.1'
   gem 'rubocop-rails'
+  gem 'capybara'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'launchy'
+  gem 'orderly'
+  gem 'shoulda-matchers'
 end
 
 group :development do
@@ -54,12 +62,6 @@ group :development do
 end
 
 group :test do
-  gem 'capybara'
-  gem 'factory_bot_rails'
-  gem 'faker'
-  gem 'launchy'
-  gem 'orderly'
-  gem 'shoulda-matchers'
   gem 'simplecov'
   gem 'vcr'
   gem 'webmock'
