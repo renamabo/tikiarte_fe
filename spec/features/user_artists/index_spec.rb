@@ -14,6 +14,11 @@ RSpec.describe "the user artists dashboard" do
       within('#header') do
         expect(page).to have_content('My Artists')
       end
+
+      within('#artists') do
+        expect(page).to have_content('artist_1')
+        # expect(page).to have_content('artist_2')
+      end
     end
   end
 end
