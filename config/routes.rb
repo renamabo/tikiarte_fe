@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   get '/auth/:provider/callback', to: 'sessions#create'
   # post '/', to: 'sessions#create' #just guessing that we want a welcome root
+
+  resources :user, only: :show do
+    resources :artists, controller: 'user_artists'
+  end
 end

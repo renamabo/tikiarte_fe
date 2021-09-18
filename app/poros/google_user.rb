@@ -1,7 +1,8 @@
 class GoogleUser
-  attr_reader :email
+  attr_reader :id, :email
 
   def initialize(user_info)
-    @director_email = user_info[:email]
+    @id = user_info[:id]
+    @email = user_info[:attributes][:email]
   end
 end
