@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def create
     auth_hash = request.env['omniauth.auth']
     if auth_hash == :invalid_credentials
-      flash[:error] = "Authentication failed."
+      flash[:error] = "Oops, something went wrong!"
       redirect_to root_path
     else
       user_info = {
