@@ -10,6 +10,7 @@ RSpec.describe "create user artist", :vcr do
   describe 'functionality' do
     it 'new artist' do
       visit user_artists_path(@user.id)
+      expect(page).to_not have_content('artist_1')
 
       click_button 'Add Artist'
 
