@@ -32,7 +32,13 @@
           1,
           null,
           null,
-          0,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
           null,
           null,
           null
@@ -120,7 +126,7 @@
           1,
           1,
           1,
-          1,
+          4,
           1,
           1,
           null
@@ -445,6 +451,7 @@
         "lines": [
           1,
           1,
+          2,
           null,
           null,
           1,
@@ -453,7 +460,7 @@
           1,
           1,
           1,
-          0,
+          1,
           null,
           null,
           0,
@@ -479,6 +486,13 @@
           null,
           1,
           null,
+          null,
+          1,
+          2,
+          2,
+          7,
+          null,
+          null,
           null
         ]
       },
@@ -486,7 +500,7 @@
         "lines": [
           1,
           1,
-          0,
+          3,
           null,
           null,
           1,
@@ -501,13 +515,28 @@
           null,
           1,
           1,
-          0,
-          0,
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/mainframe/turing/3module/projects/tikiarte_fe/app/poros/artist.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          7,
           null,
           null
         ]
       }
     },
-    "timestamp": 1631993787
+    "timestamp": 1631997374
   }
 }

@@ -3,7 +3,9 @@
 </div>
 
 <div id='artists'>
-
+  <% @artists.each do |a| %>
+    <p><%= a.username %></p>
+  <% end %>
 </div>
 
 <div id='button'>

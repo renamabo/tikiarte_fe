@@ -1,6 +1,6 @@
 class BackendService
   def self.connection
-    Faraday.new('https://tiki-be.herokuapp.com')
+    Faraday.new('https://tikiarte-be.herokuapp.com')
   end
 
   def self.create_or_find_user(user_info)
@@ -13,14 +13,13 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.create_user_artist(artist_info)
-    binding.pry
-    response = connection.post("/api/v1/directors/#{current_user.id}/artists", artist_info)
+  def self.create_user_artist(artist_info, user_id)
+    response = connection.post("/api/v1/directors/#{user_id}/artists", artist_info)
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.get_artists
-    response = connection.get("/api/v1/directors/#{current_user.id}/artists")
+  def self.get_artists(user_id)
+    response = connection.get("/api/v1/directors/#{user_id}/artists")
     JSON.parse(response.body, symbolize_names: true)
   end
 end

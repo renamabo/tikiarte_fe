@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "create user artist" do
+RSpec.describe "create user artist", :vcr do
   before(:each) do
     @user = GoogleUser.new( { id: 1, attributes: { email: 'test@test.com' } } )
 

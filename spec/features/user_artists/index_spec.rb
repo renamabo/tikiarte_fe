@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "the user artists dashboard" do
+RSpec.describe "the user artists dashboard", :vcr do
   before(:each) do
     @user = GoogleUser.new( { id: 1, attributes: { email: 'test@test.com' } } )
 
@@ -16,8 +16,9 @@ RSpec.describe "the user artists dashboard" do
       end
 
       within('#artists') do
-        expect(page).to have_content('artist_1')
-        # expect(page).to have_content('artist_2')
+        expect(page).to have_content('satan')
+        expect(page).to have_content('medusa')
+        expect(page).to have_content('xena')
       end
     end
   end

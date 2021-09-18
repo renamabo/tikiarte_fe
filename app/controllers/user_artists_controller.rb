@@ -1,6 +1,6 @@
 class UserArtistsController < ApplicationController
   def index
-    @artists = UserArtistsFacade.artists 
+    @artists = UserArtistsFacade.artists(current_user.id)
   end
 
   def new
@@ -18,6 +18,6 @@ class UserArtistsController < ApplicationController
 
   private
   def artist_params
-    params.permit(:username, :password, :password_confirmation)
+    params.permit(:username, :password, :password_confirmation, :user_id)
   end
 end

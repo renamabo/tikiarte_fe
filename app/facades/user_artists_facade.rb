@@ -6,12 +6,12 @@ class UserArtistsFacade
         password: input[:password]
       }
     }
-    BackendService.create_user_artist(artist_info)
+    BackendService.create_user_artist(artist_info, input[:user_id])
   end
 
-  def self.artists
-    json = BackendService.get_artists
-    json[:data][:artists].map do |artist|
+  def self.artists(user_id)
+    json = BackendService.get_artists(user_id)
+    json[:data][:attributes][:artists].map do |artist|
       Artist.new(artist)
     end
   end
