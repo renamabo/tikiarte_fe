@@ -35,6 +35,6 @@ RSpec.describe 'Welcome page' do
     Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
 
     click_button "Sign in with Google"
-    expect(page).to have_content('"Oops, something went wrong!"')
+    expect(page).to have_content("Oops, something went wrong!")
   end
 end
