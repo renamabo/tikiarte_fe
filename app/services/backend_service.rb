@@ -12,4 +12,10 @@ class BackendService
     response = connection.get('/api/v1/users', user_id)
     JSON.parse(response.body, symbolize_names: true)
   end
+
+  def self.create_user_artist(artist_info)
+    binding.pry
+    response = connection.post("/api/v1/directors/#{current_user.id}/artists", artist_info)
+    JSON.parse(response.body, symbolize_names: true)
+  end
 end
