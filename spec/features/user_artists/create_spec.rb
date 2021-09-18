@@ -28,6 +28,10 @@ RSpec.describe "create user artist" do
       end
 
       expect(current_path).to eq(user_artists_path(@user.id))
+
+      within('#artists') do
+        expect(page).to have_content('artist_1')
+      end
     end
   end
 end
