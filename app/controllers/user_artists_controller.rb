@@ -3,8 +3,7 @@ class UserArtistsController < ApplicationController
     @artists = UserArtistsFacade.artists(current_user.id)
   end
 
-  def new
-  end
+  def new; end
 
   def create
     if artist_params[:password] == artist_params[:password_confirmation]
@@ -17,6 +16,7 @@ class UserArtistsController < ApplicationController
   end
 
   private
+
   def artist_params
     params.permit(:username, :password, :password_confirmation, :user_id)
   end
