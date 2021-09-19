@@ -13,6 +13,12 @@ jobs:
           name: Which bundler?
           command: bundle -v
       - ruby/bundle-install
+      - run: sudo apt install -y postgresql-client || true
+      - run:
+          name: Database Setup
+          command: |
+            bundle exec rake db:create
+            bundle exec rake db:structure:load
       - run:
           name: run test suite
           command: bundle exec rspec -fd

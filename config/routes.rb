@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :user, only: :show do
     resources :artists, controller: 'user_artists'
   end
+  resources :public_gallery, only: :index
 end
