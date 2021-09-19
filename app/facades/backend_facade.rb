@@ -10,4 +10,12 @@ class BackendFacade
     formatted_attributes = response[:data]
     GoogleUser.new(formatted_attributes)
   end
+
+  def self.public_images
+    response = BackendService.get_public_images
+    formatted_attributes = response[:data]
+    formatted_attributes.map do |image|
+      Image.new(image)
+    end
+  end
 end

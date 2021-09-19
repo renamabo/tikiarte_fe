@@ -1,0 +1,11 @@
+<div id="header">
+  <h1>Public Gallery</h1>
+</div>
+
+<div id="images">
+  <% @public_images.each do |image| %>
+    <div class="image-<%= image.id %> ">
+      <%= image_tag(image.url, alt: 'Public Image') %>
+    </div>
+  <% end %>
+</div>
