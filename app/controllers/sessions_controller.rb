@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
         }
       user = BackendFacade.user(user_info)
       session[:user] = user.id
-      redirect_to user_path(user.id)
+      redirect_to user_artists_path(user.id)
     end
   end
 end
