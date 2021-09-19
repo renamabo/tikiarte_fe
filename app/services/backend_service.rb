@@ -12,7 +12,7 @@ class BackendService
   end
 
   def self.find_user_by_id(user_id)
-    response = connection.get('/api/v1/users', user_id)
+    response = connection.get("/api/v1/directors/#{user_id}")
     JSON.parse(response.body, symbolize_names: true)
   end
 
