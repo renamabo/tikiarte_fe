@@ -13,6 +13,7 @@ jobs:
           name: Which bundler?
           command: bundle -v
       - ruby/bundle-install
+      - run: sudo apt install -y postgresql-client || true
       - run:
           name: Database Setup
           command: |
