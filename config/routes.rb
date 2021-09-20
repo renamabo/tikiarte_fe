@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     resources :artists, controller: 'user_artists'
   end
   resources :public_gallery, only: :index
+  resources :inspiration, only: :index
 end
