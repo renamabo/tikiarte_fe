@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   end
   resources :public_gallery, only: :index
   resources :inspiration, only: :index
+  resources :account_management, only: :index
 end

@@ -1,0 +1,13 @@
+<div id='header'>
+  <h1>Account Management</h1>
+</div>
+
+<div id='artists'>
+  <% @artists.each do |artist| %>
+  <div id='artist-<%= artist.id %>'>
+    <%= artist.username %>
+    <%= button_to 'Edit', edit_user_artist_path(current_user.id, artist.id), method: :get %>
+    <%= button_to 'Delete', "/user/#{current_user.id}/artists/#{artist.id}", method: :delete %>
+  </div>
+  <% end %>
+</div>
