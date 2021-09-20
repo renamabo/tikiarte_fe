@@ -3,6 +3,11 @@ class UserArtistsController < ApplicationController
     @artists = UserArtistsFacade.artists(current_user.id)
   end
 
+  def show
+    @artist = UserArtistsFacade.artist(current_user.id, params[:id].to_i)
+require "pry"; binding.pry
+  end
+
   def new; end
 
   def create
