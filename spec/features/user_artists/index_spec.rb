@@ -19,6 +19,12 @@ RSpec.describe "the user artists dashboard", :vcr do
         expect(page).to have_content('satan')
         expect(page).to have_content('medusa')
         expect(page).to have_content('xena')
+        expect(page).to have_button("satan's Portfolio Page")
+        expect(page).to have_button('Add Artist')
+
+        # click_button("satan's Portfolio Page") #utilize this once VCR is fully incorporated
+        #
+        # excpect(current_path).to eq(user_artist_path(@user.id, satan))
       end
     end
   end
