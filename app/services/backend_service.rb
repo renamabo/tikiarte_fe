@@ -26,6 +26,11 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.get_artist(user_id, id)
+    response = connection.get("/api/v1/directors/#{user_id}/artists/#{id}")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.update_user_artist(artist_info, user_id, artist_id)
     response = connection.put("/api/v1/directors/#{user_id}/artists/#{artist_id}", artist_info)
     JSON.parse(response.body, symbolize_names: true)

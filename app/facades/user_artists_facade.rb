@@ -16,6 +16,12 @@ class UserArtistsFacade
     end
   end
 
+  def self.artist(user_id, id)
+    json = BackendService.get_artist(user_id, id)
+    attributes = json[:data][:attributes]
+    Artist.new(attributes)
+  end
+
   def self.update(input, id)
     if input[:username] && input[:password]
       artist_info = {
