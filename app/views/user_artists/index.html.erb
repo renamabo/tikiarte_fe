@@ -6,7 +6,7 @@
   <% if @artists.count > 0  %>
     <% @artists.each do |artist| %>
       <p><%= artist.username %></p>
-      <p><%= button_to "#{artist.username}'s Portfolio Page", user_artist_path(current_user.id, artist.username), method: :get %></p>
+      <p><%= button_to "#{artist.username}'s Portfolio Page", user_artist_path(current_user.id, artist.id), method: :get %></p>
     <% end %>
     <%= button_to 'Add Artist', new_user_artist_path(current_user.id), method: :get %>
   <% else %>
