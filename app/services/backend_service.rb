@@ -29,7 +29,6 @@ class BackendService
   def self.get_artist(user_id, id)
     response = connection.get("/api/v1/directors/#{user_id}/artists/#{id}")
     JSON.parse(response.body, symbolize_names: true)
-    require "pry"; binding.pry
   end
 
   def self.get_public_images
