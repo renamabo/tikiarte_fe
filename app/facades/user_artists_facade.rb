@@ -18,5 +18,7 @@ class UserArtistsFacade
 
   def self.artist(user_id, id)
     json = BackendService.get_artist(user_id, id)
+    attributes = json[:data][:attributes]
+    Artist.new(attributes)
   end
 end
