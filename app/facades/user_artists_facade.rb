@@ -12,14 +12,14 @@ class UserArtistsFacade
   def self.artists(user_id)
     json = BackendService.get_artists(user_id)
     json[:data][:attributes][:artists].map do |artist|
-      Artist.new(artist)
+      Artist.new(artist[:username], artist[:id])
     end
   end
 
   def self.artist(user_id, id)
     json = BackendService.get_artist(user_id, id)
-    attributes = json[:data][:attributes]
-    Artist.new(attributes)
+    artist = json[:data]
+    Artist.new(artist[:attributes][:username], artist[:id])
   end
 
   def self.update(input, id)
