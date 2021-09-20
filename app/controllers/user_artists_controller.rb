@@ -20,7 +20,7 @@ class UserArtistsController < ApplicationController
   end
 
   def edit
-    # @artist = method to find artist
+    @artist = UserArtistsFacade.artist(current_user.id, params[:id])
   end
 
   def update

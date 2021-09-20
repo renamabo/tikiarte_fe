@@ -1,0 +1,14 @@
+<div id='header'>
+  <h1>Edit <%= @artist.username %></h1>
+</div>
+
+<div id='form'>
+  <%= form_with url: "/user/#{current_user.id}/artists/#{@artist.id}", method: :put, local: true do |form| %>
+  <%= form.label :username, 'Username:' %>
+  <%= form.text_field :username, id: 'username', value: @artist.username %>
+  <%= form.label :password, 'Password:' %>
+  <%= form.password_field :password, id: 'password' %>
+  <%= form.password_field :password_confirmation, id: 'password_confirmation' %>
+  <%= form.submit 'Edit Artist' %>
+<% end %>
+</div>
