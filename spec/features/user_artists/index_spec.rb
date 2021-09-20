@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "the user artists dashboard", :vcr do
+RSpec.describe "the user artists dashboard" do
   before(:each) do
     @user = GoogleUser.new( { id: 1, attributes: { email: 'test@test.com' } } )
 
@@ -9,22 +9,24 @@ RSpec.describe "the user artists dashboard", :vcr do
 
   describe 'display' do
     it 'shows header' do
-      visit user_artists_path(@user.id)
+      VCR.use_cassette('artist_index') do
+        visit user_artists_path(@user.id)
 
-      within('#header') do
-        expect(page).to have_content('My Artists')
-      end
+        within('#header') do
+          expect(page).to have_content('My Artists')
+        end
 
-      within('#artists') do
-        expect(page).to have_content('satan')
-        expect(page).to have_content('medusa')
-        expect(page).to have_content('xena')
-        expect(page).to have_button("satan's Portfolio Page")
-        expect(page).to have_button('Add Artist')
+        within('#artists') do
+          expect(page).to have_content('satan')
+          expect(page).to have_content('medusa')
+          expect(page).to have_content('xena')
+          expect(page).to have_button("satan's Portfolio Page")
+          expect(page).to have_button('Add Artist')
 
-        # click_button("satan's Portfolio Page") #utilize this once VCR is fully incorporated
-        #
-        # excpect(current_path).to eq(user_artist_path(@user.id, satan))
+          click_button("satan's Portfolio Page") 
+
+          expect(current_path).to eq(user_artist_path(@user.id, 1))
+        end
       end
     end
   end
