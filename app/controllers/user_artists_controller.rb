@@ -4,8 +4,7 @@ class UserArtistsController < ApplicationController
   end
 
   def show
-    @artist = UserArtistsFacade.artist(current_user.id, params[:id].to_i)
-require "pry"; binding.pry
+    @artist = UserArtistsFacade.artist(current_user.id, params[:id])
   end
 
   def new; end
