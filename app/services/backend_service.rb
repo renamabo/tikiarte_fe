@@ -26,6 +26,11 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.get_artist(user_id, id)
+    response = connection.get("/api/v1/directors/#{user_id}/artists/#{id}")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.get_public_images
     response = connection.get('/api/v1/public_images')
     JSON.parse(response.body, symbolize_names: true)
