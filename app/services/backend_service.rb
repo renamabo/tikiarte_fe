@@ -37,7 +37,7 @@ class BackendService
   end
 
   def self.delete_user_artist(user_id, artist_id)
-    response = connection.delete("/api/v1/directors/#{user_id}/artists/#{artist_id}")
+    connection.delete("/api/v1/directors/#{user_id}/artists/#{artist_id}")
   end
 
   def self.find_public_images
