@@ -12,10 +12,16 @@ class BackendFacade
   end
 
   def self.public_images
-    response = BackendService.get_public_images
+    response = BackendService.find_public_images
     formatted_attributes = response[:data]
     formatted_attributes.map do |image|
       Image.new(image)
     end
+  end
+
+  def self.inspiration_image
+    response = BackendService.find_random_image
+    formatted_attributes = response[:data]
+    Image.new(formatted_attributes)
   end
 end

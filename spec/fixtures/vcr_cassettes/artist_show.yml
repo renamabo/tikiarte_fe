@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://tikiarte-be.herokuapp.com/api/v1/directors/1/artists/1
+    uri: https://tikiarte-be.herokuapp.com/api/v1/directors/5/artists/5
     body:
       encoding: US-ASCII
       string: ''
@@ -21,25 +21,25 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 04:12:56 GMT
+      - Mon, 20 Sep 2021 15:37:52 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"58219a4423185942b800656673d40731"
+      - W/"b0e6a6838ee21a72c7fa7471d7eca314"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6a4cc6e4-785f-46ad-b204-0575620c613b
+      - 9a0c260f-d710-4ea0-9533-7d78f7e07b88
       X-Runtime:
-      - '0.085082'
+      - '0.004315'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"artist","attributes":{"username":"satan","password_digest":"$2a$12$WF1OPftJMA2l81HMj1F.KOGeh.QVMFdlazLbklYvzR5xtEZn3mH7u","director_id":1}}}'
-  recorded_at: Mon, 20 Sep 2021 04:12:56 GMT
+      string: '{"data":{"id":"5","type":"artist","attributes":{"username":"Tiki","password_digest":"$2a$12$NqY.8gPRcnylNYKK.dfr.em1w826O3FqSoTvpFqTxQNL3UpVvX.PG","director_id":5}}}'
+  recorded_at: Mon, 20 Sep 2021 15:37:52 GMT
 recorded_with: VCR 6.0.0

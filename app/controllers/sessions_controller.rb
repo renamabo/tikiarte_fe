@@ -15,4 +15,9 @@ class SessionsController < ApplicationController
       redirect_to user_artists_path(user.id)
     end
   end
+
+  def delete
+    session[:user_id] = nil
+    redirect_to root_path
+  end
 end

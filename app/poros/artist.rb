@@ -2,8 +2,8 @@ class Artist
   attr_reader :username,
               :id
 
-  def initialize(artist_info)
-    @username = artist_info[:username]
-    @id = artist_info[:id]
+  def initialize(username, id)
+    @username = username
+    @id = id
   end
 end
