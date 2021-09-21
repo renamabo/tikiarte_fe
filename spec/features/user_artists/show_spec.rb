@@ -19,4 +19,27 @@ RSpec.describe "artist show page" do
       end
     end
   end
+
+  describe 'link to upload page' do
+    it 'can redirect to art_pieces upload page' do
+      # As a user, when I click the link to upload an image, I am directed to the image upload page where I can click to upload an image file, add tags and a name to the image, click upload to add image.
+      # Route to upload (create) page
+      # Add options to upload image (file drag and drop and/or file directory upload)
+      # Add Upload or save button
+      # Redirect to artist show page after upload complete
+      visit user_artist_path(@user.id, @artist.id)
+
+      # Change to have_button with image source for icon
+
+      expect(page).to have_link("Upload an Art Piece")
+
+      click_link "Upload an Art Piece"
+
+      expect(current_path).to eq(new_user_artist_art_piece_path)
+      expect(page).to have_content("Upload your art piece here!")
+      expect(page).to have_field(artpiece_title)
+      expect(page).to have_content("Submit Art Piece")
+    end
+  end
+
 end

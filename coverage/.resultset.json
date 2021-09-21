@@ -1,22 +1,83 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/spec/features/user_artists/show_spec.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/spec/features/user_artists/show_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
+          2,
+          2,
+          null,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
           1,
           1,
           null,
           1,
           null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/spec/rails_helper.rb": {
+        "lines": [
           null,
           null,
           null,
           1,
           1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           null,
@@ -27,100 +88,59 @@
           0,
           0,
           null,
+          1,
+          null,
+          1,
           null,
           null,
-          null
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/spec/rails_helper.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          0,
-          0,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/config/environment.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -131,7 +151,7 @@
           1
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/config/application.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/config/application.rb": {
         "lines": [
           null,
           null,
@@ -170,7 +190,7 @@
           null
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/config/boot.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/config/boot.rb": {
         "lines": [
           null,
           null,
@@ -180,7 +200,7 @@
           1
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/config/environments/test.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/config/environments/test.rb": {
         "lines": [
           null,
           null,
@@ -232,7 +252,7 @@
           null
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/config/initializers/application_controller_renderer.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/config/initializers/application_controller_renderer.rb": {
         "lines": [
           null,
           null,
@@ -245,7 +265,7 @@
           null
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/config/initializers/assets.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -265,7 +285,7 @@
           null
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/config/initializers/backtrace_silencers.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/config/initializers/backtrace_silencers.rb": {
         "lines": [
           null,
           null,
@@ -277,7 +297,7 @@
           null
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/config/initializers/content_security_policy.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -307,7 +327,7 @@
           null
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/config/initializers/cookies_serializer.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/config/initializers/cookies_serializer.rb": {
         "lines": [
           null,
           null,
@@ -318,7 +338,7 @@
           1
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/config/initializers/filter_parameter_logging.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -328,7 +348,7 @@
           1
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/config/initializers/inflections.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -349,7 +369,7 @@
           null
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/config/initializers/mime_types.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/config/initializers/mime_types.rb": {
         "lines": [
           null,
           null,
@@ -358,7 +378,7 @@
           null
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/config/initializers/omniauth.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/config/initializers/omniauth.rb": {
         "lines": [
           1,
           1,
@@ -366,7 +386,7 @@
           1
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/config/initializers/wrap_parameters.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -386,141 +406,201 @@
           null
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/config/routes.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/config/routes.rb": {
         "lines": [
           null,
           null,
           1,
-          null,
+          1,
+          1,
           1,
           1,
           null,
           1,
           1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/app/helpers/application_helper.rb": {
+        "lines": [
+          null,
           null,
           1,
           null
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/app/helpers/application_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
-      },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/app/poros/google_user.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/app/poros/google_user.rb": {
         "lines": [
           1,
           1,
           null,
           1,
-          1,
-          1,
+          2,
+          2,
           null,
           null
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/app/poros/artist.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/app/poros/artist.rb": {
         "lines": [
           1,
           1,
           null,
-          1,
-          5,
           null,
-          null
-        ]
-      },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/app/controllers/application_controller.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/app/controllers/user_artists_controller.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/app/facades/user_artists_facade.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          1,
-          1,
           1,
           4,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          4,
           null,
           null
         ]
       },
-      "/Users/jcortespomeo/m3/proyectos/tikiarte/tikiarte_fe/app/services/backend_service.rb": {
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/app/controllers/application_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/app/controllers/user_artists_controller.rb": {
         "lines": [
           1,
           1,
-          1,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
           0,
           null,
           null,
           1,
+          2,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/app/facades/user_artists_facade.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/heartbeat/turing/3module/projects/tikiarte/tikiarte_fe/app/services/backend_service.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
           0,
           0,
           null,
@@ -531,13 +611,22 @@
           null,
           null,
           1,
+          2,
+          2,
+          null,
+          null,
           1,
+          0,
+          0,
+          null,
+          null,
           1,
+          0,
           null,
           null,
-          null,
-          null,
-          null,
+          1,
+          0,
+          0,
           null,
           null,
           1,
@@ -548,6 +637,6 @@
         ]
       }
     },
-    "timestamp": 1632079396
+    "timestamp": 1632186880
   }
 }
