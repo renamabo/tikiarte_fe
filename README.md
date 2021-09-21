@@ -4,7 +4,6 @@
 [![Issues][issues-shield]][issues-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Forks][forks-shield]][forks-url]
-<img src="" />  
 
 ### Welcome to TikiArté! - A database-driven web application
 
@@ -145,7 +144,7 @@ Find the [project spec here](https://backend.turing.edu/module3/projects/consult
     ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-darwin20]
     ```
 
-* [System Dependencies](https://github.com/Bhjones45/tikiarte_be/blob/main/Gemfile)
+* [System Dependencies](https://github.com/danembb/tikiarte_fe/blob/main/Gemfile)
     ```bash
     $ rails -v
     Rails 5.2.6
@@ -154,8 +153,8 @@ Find the [project spec here](https://backend.turing.edu/module3/projects/consult
 * Database Creation
     ```bash
     $ rails db:{drop,create,migrate,seed}
-    Created database 'tikiarte_be_development'
-    Created database 'tikiarte_be_test'
+    Created database 'tikiarte_fe_development'
+    Created database 'tikiarte_fe_test'
     ```
 
 * API Access
