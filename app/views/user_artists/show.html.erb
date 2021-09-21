@@ -1,6 +1,8 @@
-<div id='header'>
+<div align='center' id='header'>
   <h1><%= @artist.username %>'s Portfolio</h1>
+  <a href="<%= new_user_artist_art_piece_path(current_user.id, @artist.id) %>">Upload an Art Piece</a>
 </div>
-
+<br>
+<br>
 <%= render partial: 'partials/user_artists/private_images' %>
 <%= render partial: 'partials/user_artists/public_images' %>

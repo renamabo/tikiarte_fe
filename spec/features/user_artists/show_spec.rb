@@ -37,6 +37,7 @@ RSpec.describe "artist show page" do
       expect(current_path).to eq(new_user_artist_art_piece_path(@user.id, @artist.id))
       expect(page).to have_content("Upload an Art Piece")
       expect(page).to have_content("Name Your New Art Piece:")
+      expect(page).to have_content("Describe Your Art Piece:")
       expect(page).to have_field(:art_piece_title)
       expect(page).to have_button("Create Art Piece")
     end

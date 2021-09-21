@@ -4,6 +4,9 @@ class ArtPiecesController < ApplicationController
     @artist = UserArtistsFacade.artist(current_user.id, params[:id])
   end
 
+  def create
+  end
+
 
 
 
