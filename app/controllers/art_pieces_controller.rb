@@ -5,6 +5,12 @@ class ArtPiecesController < ApplicationController
   end
 
   def create
+    # post request to BE (and on to amazon)
+      # this will return: 1) blob 2) signed url 3) the other thing
+        # is this a json? or hash?
+    # if response (with signed_url & blob) is present
+      # convert something into md5 format
+      #
   end
 
 

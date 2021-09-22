@@ -49,4 +49,10 @@ class BackendService
     response = connection.get('/api/v1/inspiration')
     JSON.parse(response.body, symbolize_names: true)
   end
+
+  def self.request_presigned_url
+    # will this be changed to /api/v1/presigned_url?
+    response = connection.post('/presigned_url')
+    JSON.parse(response.body, symbolize_names: true)
+  end
 end

@@ -42,7 +42,7 @@ RSpec.describe 'Welcome page' do
         expect(page).to have_button("Sign in with Google")
         click_button "Sign in with Google"
       end
-      expect(current_path).to eq('/user/4/artists')
+      expect(current_path).to eq('/user/2/artists')
     end
 
     it 'returns an authentication error when credentials are not valid' do
