@@ -21,7 +21,7 @@ class BackendFacade
 
   def self.inspiration_image
     response = BackendService.find_random_image
-    formatted_attributes = response[:data]
-    Image.new(formatted_attributes)
+    formatted_attributes = response[:data][:url]
+    InspirationImage.new(formatted_attributes)
   end
 end

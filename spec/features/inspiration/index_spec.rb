@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Inspiration Page' do
+RSpec.describe 'Inspiration Page', :vcr do
   before(:each) do
     @user = GoogleUser.new( { id: 1, attributes: { email: 'test@test.com' } } )
 
@@ -23,16 +23,11 @@ RSpec.describe 'Inspiration Page' do
 
   describe 'function' do
     it 'can return a random picture' do
-      mock_response = "{\"data\":{\"id\":1,\"attributes\":{\"url\":\"/app/images/face.png\"}}}"
-
-      allow_any_instance_of(Faraday::Connection).to receive(:get).and_return(Faraday::Response.new)
-      allow_any_instance_of(Faraday::Response).to receive(:body).and_return(mock_response)
-
       visit inspiration_index_path
 
       within('#picture') do
         click_link 'Randomize my Picture!'
-        expect(page).to have_css("img[src*='/app/images/face.png']")
+        expect(page).to have_css("img[src*='https://i.picsum.photos/id/953/500/600.jpg?hmac=usnLsjAjLDy4r2YvpPQUPYIWCAs7eEuXQ1t9fsSd96Y']")
       end
     end
   end
