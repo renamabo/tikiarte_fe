@@ -15,14 +15,18 @@
       <% if image.status == 'private' %>
         <div class="col-lg-3 mb-3 mb-3 mb-lg-0">
           <img
-            src="<%= image.upload_url %>"
+            src="<%= image.url %>"
             class="w-100 shadow-1-strong rounded mb-4"
             alt="<%= image.title %>"
+            style=""
           />
         </div>
         <div class="desc"><%= image.description %></div>
-        <%= link_to 'Make Public', edit_artist_image_path(@artist.id, image.id), method: :get, params: {status: 'public'} %>
-        <%= link_to 'Delete', "/artists/#{@artist.id}/images/#{image.id}", method: :delete %>
+        <%= form_with url: "/user/#{current_user.id}/artists/#{@artist.id}/art_pieces/#{image.id}", method: :put, local: true do |f| %>
+          <%= f.hidden_field :status, value: 'public' %>
+          <%= f.submit 'Make Public' %>
+        <% end %>
+        <%= link_to 'Delete', "/user/#{current_user.id}/artists/#{@artist.id}/art_pieces/#{image.id}", method: :delete %>
       <% end %>
     <% end %>
     </div>
@@ -35,14 +39,17 @@
         <% if image.status == 'public' %>
         <div class="col-lg-3 mb-3 mb-3 mb-lg-0">
           <img
-            src="<%= image.upload_url %>"
+            src="<%= image.url %>"
             class="w-100 shadow-1-strong rounded mb-4"
             alt="<%= image.title %>"
           />
         </div>
         <div class="desc"><%= image.description %></div>
-        <%= link_to 'Make Private', edit_artist_image_path(@artist.id, image.id), method: :get, params: {status: 'private'} %>
-        <%= link_to 'Delete', "/artists/#{@artist.id}/images/#{image.id}", method: :delete %>
+        <%= form_with url: "/user/#{current_user.id}/artists/#{@artist.id}/art_pieces/#{image.id}", method: :put, local: true do |f| %>
+          <%= f.hidden_field :status, value: 'private' %>
+          <%= f.submit 'Make Public' %>
+        <% end %>
+        <%= link_to 'Delete', "/user/#{current_user.id}/artists/#{@artist.id}/art_pieces/#{image.id}", method: :delete %>
         <% end %>
       <% end %>
     </div>

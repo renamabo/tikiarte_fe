@@ -5,28 +5,10 @@
 <% if @public_images.nil? == false %>
   <div id="images">
     <div class="row">
-      <% @public_images[0..2].each do |image| %>
+      <% @public_images.each do |image| %>
       <div class="col-lg-4 mb-4 mb-lg-0">
         <img
-          src="<%= image.upload_url %>"
-          class="w-100 shadow-1-strong rounded mb-4"
-          alt="<%= image.title %>"
-        />
-      </div>
-      <% end %>
-      <% @public_images[3..5].each do |image| %>
-      <div class="col-lg-4 mb-4 mb-lg-0">
-        <img
-          src="<%= image.upload_url %>"
-          class="w-100 shadow-1-strong rounded mb-4"
-          alt="<%= image.title %>"
-        />
-      </div>
-      <% end %>
-      <% @public_images[6..8].each do |image| %>
-      <div class="col-lg-4 mb-4 mb-lg-0">
-        <img
-          src="<%= image.upload_url %>"
+          src="<%= image.url %>"
           class="w-100 shadow-1-strong rounded mb-4"
           alt="<%= image.title %>"
         />
