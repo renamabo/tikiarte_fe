@@ -58,8 +58,8 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.create_image(director_id, artist_id, image_info)
-    response = connection.post("/api/v1/directors/#{director_id}/artists/#{artist_id}/images") do |req|
+  def self.create_image(artist_id, image_info)
+    response = connection.post("/api/v1/artists/#{artist_id}/images") do |req|
       req.headers['Content-Type'] = 'application/json'
       req.body = image_info.to_json
     end
