@@ -56,7 +56,9 @@ class BackendService
 
   def self.find_public_images
     response = connection.get('/api/v1/public_images')
-    JSON.parse(response.body, symbolize_names: true)
+    if response.body != ""
+      JSON.parse(response.body, symbolize_names: true)
+    end
   end
 
   def self.find_random_image

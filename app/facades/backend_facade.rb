@@ -14,8 +14,10 @@ class BackendFacade
   def self.artist_images(artist_id)
     response = BackendService.get_artist_images(artist_id)
     formatted_attributes = response[:data][:images]
-    formatted_attributes.map do |image|
-      Image.new(image[:id], image)
+    if formatted_attributes.nil? == false
+      formatted_attributes.map do |image|
+        Image.new(image[:id], image)
+      end
     end
   end
 
@@ -34,9 +36,11 @@ class BackendFacade
 
   def self.public_images
     response = BackendService.find_public_images
-    formatted_attributes = response[:data]
-    formatted_attributes.map do |image|
-      Image.new(image[:id], image[:attributes])
+    if response.nil? == false
+      formatted_attributes = response[:data]
+      formatted_attributes.map do |image|
+        Image.new(image[:id], image[:attributes])
+      end
     end
   end
 
