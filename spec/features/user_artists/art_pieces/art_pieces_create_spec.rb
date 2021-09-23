@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe 'art piece upload page' do
   before(:each) do
-    @user = GoogleUser.new( { id: 5, attributes: { email: 'test@test.com' } } )
-    @artist = Artist.new('Tiki', 5)
+    @user = GoogleUser.new( { id: 1, attributes: { email: 'test@test.com' } } )
+    @artist = Artist.new('Tiki', 1)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
   end
   # As a user, when I click the link to upload an image, I am directed to the image upload page where I can drag an image file or click to upload an image file, add tags and a name to the image, click upload to add image.

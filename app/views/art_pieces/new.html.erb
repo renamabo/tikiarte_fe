@@ -9,7 +9,7 @@
     <%= f.label :art_piece_description,  "Describe Your Art Piece:" %>
     <%= f.text_field :art_piece_description, id: :art_piece_description %> <br>
     <%= f.label :image_upload %>
-    <%= f.file_field :image_upload, id: :image_upload, accept: "image/png,image/jpg,image/jpeg" %> <br>
+    <%= f.file_field :image_upload, id: :image_upload, accept: "image/jpeg" %> <br>
     <%= f.submit "Create Art Piece" %>
 <% end %>
 </div>
