@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "public gallery" do
+RSpec.describe "public gallery", :vcr do
   before(:each) do
     @user = GoogleUser.new( { id: 1, attributes: { email: 'test@test.com' } } )
 
