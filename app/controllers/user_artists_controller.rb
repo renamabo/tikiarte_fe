@@ -5,6 +5,7 @@ class UserArtistsController < ApplicationController
 
   def show
     @artist = UserArtistsFacade.artist(current_user.id, params[:id])
+    @images = BackendFacade.artist_images(params[:id])
   end
 
   def new; end
