@@ -13,10 +13,10 @@ class BackendFacade
 
   def self.artist_images(artist_id)
     response = BackendService.get_artist_images(artist_id)
-    formatted_attributes = response[:data][:images]
+    formatted_attributes = response[:data]
     if formatted_attributes.nil? == false
       formatted_attributes.map do |image|
-        Image.new(image[:id], image)
+        Image.new(image[:id], image[:attributes])
       end
     end
   end

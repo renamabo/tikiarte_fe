@@ -38,13 +38,16 @@ class ArtPiecesController < ApplicationController
     redirect_to user_artist_path(current_user.id, artist.id)
   end
 
+  def edit
+  end
+
   def update
-    BackendFacade.update_image(image_params, params[:id])
+    BackendFacade.update_image(update_image_params, params[:id])
     redirect_to user_artist_path(current_user.id, params[:artist_id])
   end
 
   def destroy
-    BackendFacade.delete_image(params[:artist_id], image_id)
+    BackendFacade.delete_image(params[:artist_id], params[:id])
     redirect_to user_artist_path(current_user.id, params[:artist_id])
   end
 
@@ -57,5 +60,9 @@ class ArtPiecesController < ApplicationController
 
   def image_params
     params.permit(:art_piece_title, :art_piece_description)
+  end
+
+  def update_image_params
+    params.permit(:status, :artist_id)
   end
 end

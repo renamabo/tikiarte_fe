@@ -77,7 +77,6 @@ GEM
       rexml
     crass (1.0.6)
     diff-lcs (1.4.4)
-    digest (3.0.0)
     docile (1.4.0)
     erubi (1.10.0)
     execjs (2.8.1)
@@ -325,7 +324,6 @@ DEPENDENCIES
   bootstrap
   capybara
   coffee-rails (~> 4.2)
-  digest
   factory_bot_rails
   faker
   faraday
