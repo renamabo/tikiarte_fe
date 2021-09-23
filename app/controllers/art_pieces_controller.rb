@@ -29,13 +29,22 @@ class ArtPiecesController < ApplicationController
       req.headers['Content-MD5'] = md5_hash
       req.body = file.read
     end
-    require 'pry';binding.pry
     params_hash = {
       title: params[:art_piece_title],
       description: params[:art_piece_description],
       image: blob
     }
     BackendService.create_image(current_user.id, artist.id, params_hash)
+  end
+
+  def update
+    BackendFacade.update_image(image_params, params[:id])
+    redirect_to user_artist_path(current_user.id, params[:artist_id])
+  end
+
+  def destroy
+    BackendFacade.delete_image(params[:artist_id], image_id)
+    redirect_to user_artist_path(current_user.id, params[:artist_id])
   end
 
 

@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://tikiarte-be.herokuapp.com/api/v1/directors/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 20:49:45 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"908734332e321032c36c9acac0eb3622"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8b30cbf6-5bf2-4bb3-a99e-221d4ec41296
+      X-Runtime:
+      - '0.003833'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"director","attributes":{"email":"aruwart001@gmail.com","token":"ya29.a0ARrdaM8OX3ZcE7GKWBjF_lEoVQ_HJK4mk_-PTKAxqr6OtzzfMcR7TzKOaB9pxj0deaJLUqwXCRaXVCclKhWv1bQKlsmuGcf3trHY3-DYZ1nHY2nb_g6jao2GcsjgX2i8MQX97LkTH3YKCmJZeVyE4LTnh3LP","google_id":"107027102458784015410"}}}'
+  recorded_at: Thu, 23 Sep 2021 20:49:45 GMT
+recorded_with: VCR 6.0.0

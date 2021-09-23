@@ -40,9 +40,25 @@ class BackendService
     connection.delete("/api/v1/directors/#{user_id}/artists/#{artist_id}")
   end
 
+  def self.get_artist_images(artist_id)
+    response = connection.get("/api/v1/artists/#{artist_id}/images")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.update_artist_image(artist_id, image_id, artist_info)
+    response = connection.put("/api/v1/artists/#{artist_id}/images/#{image_id}", image_info)
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.delete_artist_image(artist_id, image_id)
+    connection.delete("/api/v1/artists/#{artist_id}/images/#{image_id}")
+  end
+
   def self.find_public_images
     response = connection.get('/api/v1/public_images')
-    JSON.parse(response.body, symbolize_names: true)
+    if response.body != ""
+      JSON.parse(response.body, symbolize_names: true)
+    end
   end
 
   def self.find_random_image

@@ -1,10 +1,10 @@
 <div id="header">
-  <h1>Find Inspiration</h1>
+  <h1 class="text-center">Find Inspiration</h1>
 </div>
 
-<div id="picture">
+<div class="text-center" id="picture">
   <% unless @image.nil? %>
     <%= image_tag(@image.url, alt: 'Random Image') %>
-  <% end %>
+  <% end %><br><br>
   <%= link_to 'Randomize my Picture!', method: :get, params: { image: true } %>
 </div>

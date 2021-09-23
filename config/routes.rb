@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :user, only: :show do
     resources :artists, controller: 'user_artists' do
-      resources :art_pieces, only: [:create, :new]
+      resources :art_pieces, only: [:create, :new, :update, :destroy]
     end
   end
 

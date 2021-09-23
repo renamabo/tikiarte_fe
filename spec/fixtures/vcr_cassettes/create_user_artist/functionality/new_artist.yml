@@ -1,0 +1,131 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://tikiarte-be.herokuapp.com/api/v1/directors/1/artists
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 20:58:37 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5e9b1904a688bab36f949722555a07db"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b0e500a3-2f2e-4665-8e3e-a2d9a173b2b8
+      X-Runtime:
+      - '0.006264'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"director_artist","attributes":{"email":"dbrophy720@gmail.com","token":"ya29.a0ARrdaM-MU1xt0-bl8rIbvILDV-hjaU6G7Qu1aTGOvYVJ0flxuV3K4na62g-r-gHS8AtytbUm4lI3xsCNwuApcEjkEv_nfR786EiuVAzTg9Je165Z1b7QYzYmP8aTN35MCvSWGcgdHUxRh0H9-cyXBDcjgqLx","google_id":"100103662693449910767","artists":[{"id":1,"username":"tiki","password_digest":"$2a$12$kHhvRHTsr1tdungcP/vlUOTF8PeSwjj6Cjisi0pWLbldB9P2PhlFq","director_id":1,"created_at":"2021-09-22T21:58:06.985Z","updated_at":"2021-09-22T21:58:06.985Z"}]}}}'
+  recorded_at: Thu, 23 Sep 2021 20:58:37 GMT
+- request:
+    method: post
+    uri: https://tikiarte-be.herokuapp.com/api/v1/directors/1/artists
+    body:
+      encoding: UTF-8
+      string: artist%5Bpassword%5D=password&artist%5Busername%5D=artist_1
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 20:58:38 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e053a411ff63f744230f6a99297ce18f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ce10af2a-3616-4b2f-ae0a-7a9f35141035
+      X-Runtime:
+      - '0.248461'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"6","type":"artist","attributes":{"username":"artist_1","password_digest":"$2a$12$0ri84ynKZgnBB5SwMXSN/eJCTac0LuR1NUPDtzcwAh.DomyjAf1ki","director_id":1}}}'
+  recorded_at: Thu, 23 Sep 2021 20:58:38 GMT
+- request:
+    method: get
+    uri: https://tikiarte-be.herokuapp.com/api/v1/directors/1/artists
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 20:58:37 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b38380a0b1827f2b7b4cd65efa820b47"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ef3066be-6fb9-4e90-a4ac-e8cacba45f51
+      X-Runtime:
+      - '0.004722'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"director_artist","attributes":{"email":"dbrophy720@gmail.com","token":"ya29.a0ARrdaM-MU1xt0-bl8rIbvILDV-hjaU6G7Qu1aTGOvYVJ0flxuV3K4na62g-r-gHS8AtytbUm4lI3xsCNwuApcEjkEv_nfR786EiuVAzTg9Je165Z1b7QYzYmP8aTN35MCvSWGcgdHUxRh0H9-cyXBDcjgqLx","google_id":"100103662693449910767","artists":[{"id":1,"username":"tiki","password_digest":"$2a$12$kHhvRHTsr1tdungcP/vlUOTF8PeSwjj6Cjisi0pWLbldB9P2PhlFq","director_id":1,"created_at":"2021-09-22T21:58:06.985Z","updated_at":"2021-09-22T21:58:06.985Z"},{"id":6,"username":"artist_1","password_digest":"$2a$12$0ri84ynKZgnBB5SwMXSN/eJCTac0LuR1NUPDtzcwAh.DomyjAf1ki","director_id":1,"created_at":"2021-09-23T20:58:38.448Z","updated_at":"2021-09-23T20:58:38.448Z"}]}}}'
+  recorded_at: Thu, 23 Sep 2021 20:58:38 GMT
+recorded_with: VCR 6.0.0

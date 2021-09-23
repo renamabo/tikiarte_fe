@@ -1,0 +1,125 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://tikiarte-be.herokuapp.com/api/v1/directors/1/artists
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 20:56:37 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a2117998a518ca3026ff2020600d856a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 129001f4-6e15-41e9-b325-abf14beff795
+      X-Runtime:
+      - '0.005238'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"director_artist","attributes":{"email":"dbrophy720@gmail.com","token":"ya29.a0ARrdaM-MU1xt0-bl8rIbvILDV-hjaU6G7Qu1aTGOvYVJ0flxuV3K4na62g-r-gHS8AtytbUm4lI3xsCNwuApcEjkEv_nfR786EiuVAzTg9Je165Z1b7QYzYmP8aTN35MCvSWGcgdHUxRh0H9-cyXBDcjgqLx","google_id":"100103662693449910767","artists":[{"id":1,"username":"tiki","password_digest":"$2a$12$kHhvRHTsr1tdungcP/vlUOTF8PeSwjj6Cjisi0pWLbldB9P2PhlFq","director_id":1,"created_at":"2021-09-22T21:58:06.985Z","updated_at":"2021-09-22T21:58:06.985Z"},{"id":5,"username":"happy_little_trees","password_digest":"$2a$12$3.DIz3k8fN1NRDBloqzIwehz6MVwEGNSf7RlkkqWfixZmjMmlbfbC","director_id":1,"created_at":"2021-09-23T20:49:41.342Z","updated_at":"2021-09-23T20:56:36.679Z"}]}}}'
+  recorded_at: Thu, 23 Sep 2021 20:56:37 GMT
+- request:
+    method: delete
+    uri: https://tikiarte-be.herokuapp.com/api/v1/directors/1/artists/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 20:56:37 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 78d77612-b084-4c27-81e2-02e6aaa745a0
+      X-Runtime:
+      - '0.009012'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 23 Sep 2021 20:56:37 GMT
+- request:
+    method: get
+    uri: https://tikiarte-be.herokuapp.com/api/v1/directors/1/artists
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 20:56:37 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5e9b1904a688bab36f949722555a07db"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ae586e30-c02c-4330-8f17-7a2d13f76819
+      X-Runtime:
+      - '0.005138'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"director_artist","attributes":{"email":"dbrophy720@gmail.com","token":"ya29.a0ARrdaM-MU1xt0-bl8rIbvILDV-hjaU6G7Qu1aTGOvYVJ0flxuV3K4na62g-r-gHS8AtytbUm4lI3xsCNwuApcEjkEv_nfR786EiuVAzTg9Je165Z1b7QYzYmP8aTN35MCvSWGcgdHUxRh0H9-cyXBDcjgqLx","google_id":"100103662693449910767","artists":[{"id":1,"username":"tiki","password_digest":"$2a$12$kHhvRHTsr1tdungcP/vlUOTF8PeSwjj6Cjisi0pWLbldB9P2PhlFq","director_id":1,"created_at":"2021-09-22T21:58:06.985Z","updated_at":"2021-09-22T21:58:06.985Z"}]}}}'
+  recorded_at: Thu, 23 Sep 2021 20:56:37 GMT
+recorded_with: VCR 6.0.0
