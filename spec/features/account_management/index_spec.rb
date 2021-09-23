@@ -24,7 +24,7 @@ RSpec.describe 'Account Management Page', :vcr do
     end
   end
 
-  describe 'function' do
+  describe 'functionality' do
     it "can edit an artist's information" do
       visit account_management_index_path
 
