@@ -1,47 +1,50 @@
-<div id='header'>
-  <h1 class="text-center"><%= @artist.username %>'s Portfolio</h1>
+<div align='center' id='header'>
+  <h1><%= @artist.username %>'s Portfolio</h1>
+  <a href="<%= new_user_artist_art_piece_path(current_user.id, @artist.id) %>">Upload an Art Piece</a>
 </div>
 
+<% if @images.nil? == false %>
 <div id="count">
   <h3 class="text-center">Total Art Pieces: <%= @images.count %></h3>
 </div>
 
-<div id="private-gallery">
-  <h4 class="text-center">Private Artwork</h4>
-  <div class="row">
-  <% @images.each do |image| %>
-    <% if image.status == 'private' %>
-      <div class="col-lg-3 mb-3 mb-3 mb-lg-0">
-        <img
-          src="<%= image.upload_url %>"
-          class="w-100 shadow-1-strong rounded mb-4"
-          alt="<%= image.title %>"
-        />
-      </div>
-      <div class="desc"><%= image.description %></div>
-      <%= link_to 'Make Public', edit_artist_image_path(@artist.id, image.id), method: :get, params: {status: 'public'} %>
-      <%= link_to 'Delete', "/artists/#{@artist.id}/images/#{image.id}", method: :delete %>
+  <div id="private-gallery">
+    <h4 class="text-center">Private Artwork</h4>
+    <div class="row">
+    <% @images.each do |image| %>
+      <% if image.status == 'private' %>
+        <div class="col-lg-3 mb-3 mb-3 mb-lg-0">
+          <img
+            src="<%= image.upload_url %>"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="<%= image.title %>"
+          />
+        </div>
+        <div class="desc"><%= image.description %></div>
+        <%= link_to 'Make Public', edit_artist_image_path(@artist.id, image.id), method: :get, params: {status: 'public'} %>
+        <%= link_to 'Delete', "/artists/#{@artist.id}/images/#{image.id}", method: :delete %>
+      <% end %>
     <% end %>
-  <% end %>
+    </div>
   </div>
-</div>
 
-<div id="public-gallery">
-  <h4 class="text-center">Artwork Currently Freatured in Public Gallery</h4>
-  <div class="row">
-  <% @images.each do |image| %>
-    <% if image.status == 'public' %>
-      <div class="col-lg-3 mb-3 mb-3 mb-lg-0">
-        <img
-          src="<%= image.upload_url %>"
-          class="w-100 shadow-1-strong rounded mb-4"
-          alt="<%= image.title %>"
-        />
-      </div>
-      <div class="desc"><%= image.description %></div>
-      <%= link_to 'Make Private', edit_artist_image_path(@artist.id, image.id), method: :get, params: {status: 'private'} %>
-      <%= link_to 'Delete', "/artists/#{@artist.id}/images/#{image.id}", method: :delete %>
-    <% end %>
-  <% end %>
+  <div id="public-gallery">
+    <h4 class="text-center">Artwork Currently Freatured in Public Gallery</h4>
+    <div class="row">
+      <% @images.each do |image| %>
+        <% if image.status == 'public' %>
+        <div class="col-lg-3 mb-3 mb-3 mb-lg-0">
+          <img
+            src="<%= image.upload_url %>"
+            class="w-100 shadow-1-strong rounded mb-4"
+            alt="<%= image.title %>"
+          />
+        </div>
+        <div class="desc"><%= image.description %></div>
+        <%= link_to 'Make Private', edit_artist_image_path(@artist.id, image.id), method: :get, params: {status: 'private'} %>
+        <%= link_to 'Delete', "/artists/#{@artist.id}/images/#{image.id}", method: :delete %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
+<% end %>
