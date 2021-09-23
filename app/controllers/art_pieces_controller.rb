@@ -29,13 +29,13 @@ class ArtPiecesController < ApplicationController
       req.headers['Content-MD5'] = md5_hash
       req.body = file.read
     end
-    require 'pry';binding.pry
     params_hash = {
       title: params[:art_piece_title],
       description: params[:art_piece_description],
       image: blob
     }
-    BackendService.create_image(current_user.id, artist.id, params_hash)
+    image_response = BackendService.create_image(artist.id, params_hash)
+    redirect_to user_artist_path(current_user.id, artist.id)
   end
 
 
