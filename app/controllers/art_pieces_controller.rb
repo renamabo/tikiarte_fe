@@ -19,11 +19,17 @@ class ArtPiecesController < ApplicationController
     sleep 5
     presigned_url = presigned_response[:direct_upload][:url]
     blob = presigned_response[:blob_signed_id]
-    Faraday.put(presigned_url) do |req|
+    file = Faraday::UploadIO.new(
+      image.tempfile.path,
+      image.content_type,
+      image.original_filename
+    )
+    amazon_response = Faraday.put(presigned_url) do |req|
       req.headers['Content-Type'] = image.content_type
       req.headers['Content-MD5'] = md5_hash
-      req.body = image.read
+      req.body = file.read
     end
+    require 'pry';binding.pry
     params_hash = {
       title: params[:art_piece_title],
       description: params[:art_piece_description],
