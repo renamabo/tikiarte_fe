@@ -16,10 +16,8 @@ RSpec.describe 'Account Management Page', :vcr do
       end
 
       within('#artists') do
-        expect(page).to have_content('satan')
-        expect(page).to have_content('medusa')
-        expect(page).to have_content('xena')
         expect(page).to have_content('artist_1')
+        expect(page).to have_content('tiki')
       end
     end
   end
@@ -28,10 +26,10 @@ RSpec.describe 'Account Management Page', :vcr do
     it "can edit an artist's information" do
       visit account_management_index_path
 
-      within('#artist-10') do
+      within('#artist-2') do
         expect(page).to have_button('Edit')
         click_button('Edit')
-        expect(current_path).to eq(edit_user_artist_path(1, 10))
+        expect(current_path).to eq(edit_user_artist_path(1, 2))
       end
 
       expect(page).to have_content('Edit artist_1')
@@ -55,7 +53,7 @@ RSpec.describe 'Account Management Page', :vcr do
     it 'can delete an artist' do
       visit account_management_index_path
 
-      within('#artist-10') do
+      within('#artist-2') do
         expect(page).to have_button('Delete')
         click_button('Delete')
         expect(current_path).to eq(account_management_index_path)

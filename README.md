@@ -127,7 +127,7 @@ Find the [project spec here](https://backend.turing.edu/module3/projects/consult
 #### [Schema Design](https://app.dbdesigner.net)
 
 <p align="center">
-  <img src="https://pngimg.com/uploads/under_construction/under_construction_PNG42.png"/>
+  <img src="https://user-images.githubusercontent.com/80134340/134261007-15b1200f-a7ec-4171-bcda-83417c4e9c3f.png"/>
 </p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)

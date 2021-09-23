@@ -63,4 +63,20 @@ class BackendService
     response = connection.get('/api/v1/inspiration')
     JSON.parse(response.body, symbolize_names: true)
   end
+
+  def self.request_presigned_url(image_info)
+    response = connection.post('/presigned_url') do |req|
+      req.headers['Content-Type'] = 'application/json'
+      req.body = { file: image_info }.to_json
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.create_image(director_id, artist_id, image_info)
+    response = connection.post("/api/v1/directors/#{director_id}/artists/#{artist_id}/images") do |req|
+      req.headers['Content-Type'] = 'application/json'
+      req.body = image_info.to_json
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
 end
