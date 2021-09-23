@@ -1,0 +1,173 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://tikiarte-be.herokuapp.com/api/v1/directors/1/artists
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 20:56:35 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1010f9a5e51cdf1c1f335cbad9743cdb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6405d736-244e-4019-926e-7f472a09b252
+      X-Runtime:
+      - '0.004916'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"director_artist","attributes":{"email":"dbrophy720@gmail.com","token":"ya29.a0ARrdaM-MU1xt0-bl8rIbvILDV-hjaU6G7Qu1aTGOvYVJ0flxuV3K4na62g-r-gHS8AtytbUm4lI3xsCNwuApcEjkEv_nfR786EiuVAzTg9Je165Z1b7QYzYmP8aTN35MCvSWGcgdHUxRh0H9-cyXBDcjgqLx","google_id":"100103662693449910767","artists":[{"id":1,"username":"tiki","password_digest":"$2a$12$kHhvRHTsr1tdungcP/vlUOTF8PeSwjj6Cjisi0pWLbldB9P2PhlFq","director_id":1,"created_at":"2021-09-22T21:58:06.985Z","updated_at":"2021-09-22T21:58:06.985Z"},{"id":5,"username":"artist_1","password_digest":"$2a$12$G6lZd1WbNImp0vPZtN0NSujy6DbXBi2wa6CKihDpNca3ctVpAm/8m","director_id":1,"created_at":"2021-09-23T20:49:41.342Z","updated_at":"2021-09-23T20:49:41.342Z"}]}}}'
+  recorded_at: Thu, 23 Sep 2021 20:56:35 GMT
+- request:
+    method: get
+    uri: https://tikiarte-be.herokuapp.com/api/v1/directors/1/artists/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 20:56:36 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e875aeaa0aaf15e624deaa0a48420208"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 35e35786-39c5-4cd2-87b9-8722badf1371
+      X-Runtime:
+      - '0.004293'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"artist","attributes":{"username":"artist_1","password_digest":"$2a$12$G6lZd1WbNImp0vPZtN0NSujy6DbXBi2wa6CKihDpNca3ctVpAm/8m","director_id":1}}}'
+  recorded_at: Thu, 23 Sep 2021 20:56:36 GMT
+- request:
+    method: put
+    uri: https://tikiarte-be.herokuapp.com/api/v1/directors/1/artists/5
+    body:
+      encoding: UTF-8
+      string: artist%5Bpassword%5D=bobpaints&artist%5Busername%5D=happy_little_trees
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 20:56:36 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"103daa95dcf84611816bb3c07c5fc695"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 35a13868-6791-46d1-9e74-0d31f4a78250
+      X-Runtime:
+      - '0.260715'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"artist","attributes":{"username":"happy_little_trees","password_digest":"$2a$12$3.DIz3k8fN1NRDBloqzIwehz6MVwEGNSf7RlkkqWfixZmjMmlbfbC","director_id":1}}}'
+  recorded_at: Thu, 23 Sep 2021 20:56:36 GMT
+- request:
+    method: get
+    uri: https://tikiarte-be.herokuapp.com/api/v1/directors/1/artists
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 20:56:36 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a2117998a518ca3026ff2020600d856a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dbec38bf-0ebc-42e9-b228-8146176f2ac6
+      X-Runtime:
+      - '0.008232'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"director_artist","attributes":{"email":"dbrophy720@gmail.com","token":"ya29.a0ARrdaM-MU1xt0-bl8rIbvILDV-hjaU6G7Qu1aTGOvYVJ0flxuV3K4na62g-r-gHS8AtytbUm4lI3xsCNwuApcEjkEv_nfR786EiuVAzTg9Je165Z1b7QYzYmP8aTN35MCvSWGcgdHUxRh0H9-cyXBDcjgqLx","google_id":"100103662693449910767","artists":[{"id":1,"username":"tiki","password_digest":"$2a$12$kHhvRHTsr1tdungcP/vlUOTF8PeSwjj6Cjisi0pWLbldB9P2PhlFq","director_id":1,"created_at":"2021-09-22T21:58:06.985Z","updated_at":"2021-09-22T21:58:06.985Z"},{"id":5,"username":"happy_little_trees","password_digest":"$2a$12$3.DIz3k8fN1NRDBloqzIwehz6MVwEGNSf7RlkkqWfixZmjMmlbfbC","director_id":1,"created_at":"2021-09-23T20:49:41.342Z","updated_at":"2021-09-23T20:56:36.679Z"}]}}}'
+  recorded_at: Thu, 23 Sep 2021 20:56:36 GMT
+recorded_with: VCR 6.0.0

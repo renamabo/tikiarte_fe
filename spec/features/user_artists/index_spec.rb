@@ -17,13 +17,11 @@ RSpec.describe "the user artists dashboard" do
         end
 
         within('#artists') do
-          expect(page).to have_content('satan')
-          expect(page).to have_content('medusa')
-          expect(page).to have_content('xena')
-          expect(page).to have_button("satan's Portfolio Page")
+          expect(page).to have_content('tiki')
+          expect(page).to have_button("tiki's Portfolio Page")
           expect(page).to have_button('Add Artist')
 
-          click_button("satan's Portfolio Page") 
+          click_button("tiki's Portfolio Page")
 
           expect(current_path).to eq(user_artist_path(@user.id, 1))
         end

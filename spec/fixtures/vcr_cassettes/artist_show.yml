@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://tikiarte-be.herokuapp.com/api/v1/directors/1/artists/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 21:05:02 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0af9dea2f1d32b8667bfbd481fcf8153"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 21d2a2ef-177f-40a0-81a3-872200b03d5a
+      X-Runtime:
+      - '0.003311'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"artist","attributes":{"username":"tiki","password_digest":"$2a$12$kHhvRHTsr1tdungcP/vlUOTF8PeSwjj6Cjisi0pWLbldB9P2PhlFq","director_id":1}}}'
+  recorded_at: Thu, 23 Sep 2021 21:05:02 GMT
+- request:
+    method: get
+    uri: https://tikiarte-be.herokuapp.com/api/v1/artists/1/images
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 21:05:02 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"abca49d80e02ae8cbb03ca7483617cbe"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - de9d9187-945e-4baf-b4db-49f45aa6e55f
+      X-Runtime:
+      - '0.005493'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"artist_image","attributes":{"username":"tiki","images":[]}}}'
+  recorded_at: Thu, 23 Sep 2021 21:05:03 GMT
+recorded_with: VCR 6.0.0
