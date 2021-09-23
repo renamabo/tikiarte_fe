@@ -1,8 +1,11 @@
 class Image
-  attr_reader :url, :id
+  attr_reader :id, :url, :status, :title, :description
 
-  def initialize(image_info)
-    @url = image_info[:attributes][:url]
-    @id = image_info[:id]
+  def initialize(id, image_data)
+    @id = id
+    @url = image_data[:upload_url]
+    @status = image_data[:status]
+    @title = image_data[:title]
+    @description = image_data[:description]
   end
 end

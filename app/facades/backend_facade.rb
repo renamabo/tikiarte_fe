@@ -11,11 +11,32 @@ class BackendFacade
     GoogleUser.new(formatted_attributes)
   end
 
+  def self.artist_images(artist_id)
+    response = BackendService.get_artist_images(artist_id)
+    formatted_attributes = response[:data][:images]
+    formatted_attributes.map do |image|
+      Image.new(image[:id], image)
+    end
+  end
+
+  def self.update_image(input, id)
+    image_info = {
+      image: {
+        status: input[:status],
+      }
+    }
+    BackendService.update_artist_image(input[:artist_id], id, image_info)
+  end
+
+  def self.delete_image(user_id, artist_id)
+    BackendService.delete_artist_image(user_id, artist_id)
+  end
+
   def self.public_images
     response = BackendService.find_public_images
     formatted_attributes = response[:data]
     formatted_attributes.map do |image|
-      Image.new(image)
+      Image.new(image[:id], image[:attributes])
     end
   end
 
