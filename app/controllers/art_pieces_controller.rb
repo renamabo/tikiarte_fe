@@ -34,7 +34,8 @@ class ArtPiecesController < ApplicationController
       description: params[:art_piece_description],
       image: blob
     }
-    BackendService.create_image(current_user.id, artist.id, params_hash)
+    image_response = BackendService.create_image(artist.id, params_hash)
+    redirect_to user_artist_path(current_user.id, artist.id)
   end
 
   def update
