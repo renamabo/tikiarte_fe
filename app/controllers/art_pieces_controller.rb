@@ -1,5 +1,4 @@
 class ArtPiecesController < ApplicationController
-
   def new
     @artist = UserArtistsFacade.artist(current_user.id, params[:artist_id])
   end
@@ -24,7 +23,7 @@ class ArtPiecesController < ApplicationController
       image.content_type,
       image.original_filename
     )
-    amazon_response = Faraday.put(presigned_url) do |req|
+    Faraday.put(presigned_url) do |req|
       req.headers['Content-Type'] = image.content_type
       req.headers['Content-MD5'] = md5_hash
       req.body = file.read
@@ -34,12 +33,11 @@ class ArtPiecesController < ApplicationController
       description: params[:art_piece_description],
       image: blob
     }
-    image_response = BackendService.create_image(artist.id, params_hash)
+    BackendService.create_image(artist.id, params_hash)
     redirect_to user_artist_path(current_user.id, artist.id)
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     BackendFacade.update_image(update_image_params, params[:id])
@@ -50,7 +48,6 @@ class ArtPiecesController < ApplicationController
     BackendFacade.delete_image(params[:artist_id], params[:id])
     redirect_to user_artist_path(current_user.id, params[:artist_id])
   end
-
 
   private
 
