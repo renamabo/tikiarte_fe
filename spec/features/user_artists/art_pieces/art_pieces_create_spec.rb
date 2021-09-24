@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'art piece upload page' do
+describe 'art piece upload page', :vcr do
   before(:each) do
     @user = GoogleUser.new( { id: 1, attributes: { email: 'test@test.com' } } )
     @artist = Artist.new('Tiki', 1)
@@ -11,7 +11,7 @@ describe 'art piece upload page' do
   # Add options to upload image (file drag and drop and/or file directory upload)
   # Add Upload or save button
   # Redirect to artist show page after upload complete
-  xit 'can upload an image and redirect to artist show page once complete' do
+  it 'can upload an image and redirect to artist show page once complete' do
     visit new_user_artist_art_piece_path(@user.id, @artist.id)
 
     expect(page).to have_content("Upload an Art Piece")
@@ -23,5 +23,22 @@ describe 'art piece upload page' do
     click_button "Create Art Piece"
 
     expect(current_path).to eq(user_artist_path(@user.id, @artist.id))
+  end
+
+  it 'can change the status of the image from private to public' do
+    visit user_artist_path(5, 7)
+    within('#private-gallery')
+      first(:button,'Make Public').click
+
+    expect(current_path).to eq(user_artist_path(1, 7))
+  end
+
+  it 'can delete the image from user show page' do
+    visit user_artist_path(5, 7)
+
+    within('#private-gallery')
+      first(:link,'Delete').click
+
+    expect(current_path).to eq(user_artist_path(1, 7))
   end
 end
