@@ -50,6 +50,25 @@ RSpec.describe 'Account Management Page', :vcr do
       end
     end
 
+    it 'returns an error if passwords do not match' do
+      visit account_management_index_path
+
+      within('#artist-6') do
+        expect(page).to have_button('Edit')
+        click_button('Edit')
+      end
+
+      within('#form') do
+        fill_in 'username', with: 'happy_little_trees'
+        fill_in 'password', with: 'bobpaints'
+        fill_in 'password_confirmation', with: 'bobpaints1'
+
+        click_button 'Edit Artist'
+      end
+
+      expect(page).to have_content('Passwords do not match!')
+    end
+
     it 'can delete an artist' do
       visit account_management_index_path
 

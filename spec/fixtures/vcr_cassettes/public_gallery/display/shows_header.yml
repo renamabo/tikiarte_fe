@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://tikiarte-be.herokuapp.com/api/v1/public_gallery
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 23:25:13 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"426d8582ebcf91b11545a57f20324b43"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e96f08bb-f36d-42e4-9b5c-9a01603f0f20
+      X-Runtime:
+      - '0.014254'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"9","type":"public_gallery","attributes":{"status":"public","tags":null,"title":"kangaroo","description":"baby
+        kangaroo","artist_id":3,"upload_url":"https://tikiarte-dev.s3.us-east-2.amazonaws.com/uploads/fa383404-d62d-4e55-af14-e7c3ed61f5a5?response-content-disposition=inline%3B%20filename%3D%22sub-buzz-11577-1538631066-1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27sub-buzz-11577-1538631066-1.jpeg\u0026response-content-type=image%2Fjpeg\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIASDP6IVIQYPZYEJLU%2F20210923%2Fus-east-2%2Fs3%2Faws4_request\u0026X-Amz-Date=20210923T232513Z\u0026X-Amz-Expires=300\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=35338baed34925de8309ca86f4e6ab28cf62241c034fbcd81bec6b0c2120ac9a"}},{"id":"8","type":"public_gallery","attributes":{"status":"public","tags":null,"title":"Sugar
+        Glider","description":"flying","artist_id":3,"upload_url":"https://tikiarte-dev.s3.us-east-2.amazonaws.com/uploads/673e4c60-9d31-4cab-9393-2ec6f98df200?response-content-disposition=inline%3B%20filename%3D%22988fb9e5bb6aaf57f9825a677549343c.jpeg%22%3B%20filename%2A%3DUTF-8%27%27988fb9e5bb6aaf57f9825a677549343c.jpeg\u0026response-content-type=image%2Fjpeg\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIASDP6IVIQYPZYEJLU%2F20210923%2Fus-east-2%2Fs3%2Faws4_request\u0026X-Amz-Date=20210923T232513Z\u0026X-Amz-Expires=300\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=e0bb0742ec4857525d485e8be72e3ca3620683b146d298f161c6906f0da4f36d"}}]}'
+  recorded_at: Thu, 23 Sep 2021 23:25:13 GMT
+recorded_with: VCR 6.0.0
