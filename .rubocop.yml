@@ -32,3 +32,14 @@ Metrics/AbcSize:
 
 Rails/UniqueValidationWithoutIndex:
   Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Lint/UselessAssignment:
+  Exclude:
+    - 'app/facades/art_pieces_facade.rb'
+
+Style/GuardClause:
+  Exclude:
+    - 'app/facades/backend_facade.rb'
