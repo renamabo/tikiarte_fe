@@ -120,7 +120,7 @@ Checkout the [Backend repo](https://github.com/Bhjones45/tikiarte_be)
 3. Set up the database: `rails db:{drop,create,migrate,seed}`
 4. Set up [API Access](#project-configurations)
 
-Example wireframes to follow are found [here](www.time.gov) <-- Enter URL for wireframes here
+Example wireframes to follow are found [here](https://gist.github.com/leehopper/f0fd646e2210189056685e14f9a3119f) <-- Enter URL for wireframes here
 
 Find the [project spec here](https://backend.turing.edu/module3/projects/consultancy/)
 

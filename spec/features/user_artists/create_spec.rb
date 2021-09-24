@@ -34,5 +34,20 @@ RSpec.describe "create user artist", :vcr do
         expect(page).to have_content('artist_1')
       end
     end
+    it 'returns an error if passwords do not match' do
+      visit user_artists_path(@user.id)
+
+      click_button 'Add Artist'
+
+      within('#form') do
+        fill_in 'username', with: 'artist_1'
+        fill_in 'password', with: 'password'
+        fill_in 'password_confirmation', with: 'password1'
+
+        click_button 'Add Artist'
+      end
+
+      expect(page).to have_content('Passwords do not match!')
+    end
   end
 end

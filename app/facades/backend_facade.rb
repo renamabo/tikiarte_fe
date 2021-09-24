@@ -14,7 +14,7 @@ class BackendFacade
   def self.artist_images(artist_id)
     response = BackendService.get_artist_images(artist_id)
     formatted_attributes = response[:data]
-    if formatted_attributes.nil? == false
+    if formatted_attributes.empty? == false
       formatted_attributes.map do |image|
         Image.new(image[:id], image[:attributes])
       end
@@ -24,7 +24,7 @@ class BackendFacade
   def self.update_image(input, id)
     image_info = {
       image: {
-        status: input[:status],
+        status: input[:status]
       }
     }
     BackendService.update_artist_image(input[:artist_id], id, image_info)
@@ -36,8 +36,8 @@ class BackendFacade
 
   def self.public_images
     response = BackendService.find_public_images
-    if response.nil? == false
-      formatted_attributes = response[:data]
+    formatted_attributes = response[:data]
+    if formatted_attributes.empty? == false
       formatted_attributes.map do |image|
         Image.new(image[:id], image[:attributes])
       end
