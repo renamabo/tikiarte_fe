@@ -1,0 +1,212 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://tikiarte-be.herokuapp.com/api/v1/directors/1/artists/7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 24 Sep 2021 00:13:39 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ad7491f758252093ccbba69475d153b0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cc6acbc8-9601-484e-ada8-921aef363b43
+      X-Runtime:
+      - '0.004236'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"7","type":"artist","attributes":{"username":"bob","password_digest":"$2a$12$Cw26Zg9xOLCkADij9XN2K.ZjcgqyHU8XvC7wwurGMDgRQvprQzqSq","director_id":3}}}'
+  recorded_at: Fri, 24 Sep 2021 00:13:39 GMT
+- request:
+    method: get
+    uri: https://tikiarte-be.herokuapp.com/api/v1/artists/7/images
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 24 Sep 2021 00:13:40 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"3839abc4bec033fd0f124ff6921fc9d1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b49e8da2-066b-49ef-a316-6768f35b6878
+      X-Runtime:
+      - '0.017677'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"7","type":"image","attributes":{"status":"public","description":"hanging
+        out","tags":null,"title":"Quokka","artist_id":7,"upload_url":"https://tikiarte-dev.s3.us-east-2.amazonaws.com/uploads/06cc9da2-18e8-4439-84f1-87e8a18a8d1e?response-content-disposition=inline%3B%20filename%3D%2270700038_741384019621630_5958399291367674370_n_1574090453__rend_9_16.jpeg%22%3B%20filename%2A%3DUTF-8%27%2770700038_741384019621630_5958399291367674370_n_1574090453__rend_9_16.jpeg\u0026response-content-type=image%2Fjpeg\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIASDP6IVIQYPZYEJLU%2F20210924%2Fus-east-2%2Fs3%2Faws4_request\u0026X-Amz-Date=20210924T001340Z\u0026X-Amz-Expires=300\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=58cbfe975436049ad9827d4b5ad971dbaa0aaac6acf001a236cc89f8627c8ee8"}},{"id":"5","type":"image","attributes":{"status":"private","description":"panda
+        in tree","tags":null,"title":"Panda","artist_id":7,"upload_url":"https://tikiarte-dev.s3.us-east-2.amazonaws.com/uploads/97a6c369-1fdb-462d-8c35-438b2f81b59e?response-content-disposition=inline%3B%20filename%3D%22e03d5b812b2734826f76960eca5b5541.jpg%22%3B%20filename%2A%3DUTF-8%27%27e03d5b812b2734826f76960eca5b5541.jpg\u0026response-content-type=image%2Fjpeg\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIASDP6IVIQYPZYEJLU%2F20210924%2Fus-east-2%2Fs3%2Faws4_request\u0026X-Amz-Date=20210924T001340Z\u0026X-Amz-Expires=300\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=133815e0bd855c92f96c38225c6574d6692bfa0972eb20b8ddfc84fb5d5c3db1"}}]}'
+  recorded_at: Fri, 24 Sep 2021 00:13:40 GMT
+- request:
+    method: delete
+    uri: https://tikiarte-be.herokuapp.com/api/v1/artists/7/images/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 24 Sep 2021 00:13:40 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 32ae0a10-91d6-42de-8ddb-564f7a227df6
+      X-Runtime:
+      - '0.016469'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 24 Sep 2021 00:13:40 GMT
+- request:
+    method: get
+    uri: https://tikiarte-be.herokuapp.com/api/v1/directors/1/artists/7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 24 Sep 2021 00:13:41 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ad7491f758252093ccbba69475d153b0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dcfb53a2-1dcc-45c7-a441-e92c25bdcdcf
+      X-Runtime:
+      - '0.007440'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"7","type":"artist","attributes":{"username":"bob","password_digest":"$2a$12$Cw26Zg9xOLCkADij9XN2K.ZjcgqyHU8XvC7wwurGMDgRQvprQzqSq","director_id":3}}}'
+  recorded_at: Fri, 24 Sep 2021 00:13:41 GMT
+- request:
+    method: get
+    uri: https://tikiarte-be.herokuapp.com/api/v1/artists/7/images
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 24 Sep 2021 00:13:41 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"608041542694f56480d7a09e8b029a10"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e2d91ca3-b238-476e-b775-95edefed9970
+      X-Runtime:
+      - '0.019128'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"7","type":"image","attributes":{"status":"public","description":"hanging
+        out","tags":null,"title":"Quokka","artist_id":7,"upload_url":"https://tikiarte-dev.s3.us-east-2.amazonaws.com/uploads/06cc9da2-18e8-4439-84f1-87e8a18a8d1e?response-content-disposition=inline%3B%20filename%3D%2270700038_741384019621630_5958399291367674370_n_1574090453__rend_9_16.jpeg%22%3B%20filename%2A%3DUTF-8%27%2770700038_741384019621630_5958399291367674370_n_1574090453__rend_9_16.jpeg\u0026response-content-type=image%2Fjpeg\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIASDP6IVIQYPZYEJLU%2F20210924%2Fus-east-2%2Fs3%2Faws4_request\u0026X-Amz-Date=20210924T001341Z\u0026X-Amz-Expires=300\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=f35836c68f94d6c377a65886d1f4e16955f38ac7924564b039d8898f3d01f5e7"}}]}'
+  recorded_at: Fri, 24 Sep 2021 00:13:41 GMT
+recorded_with: VCR 6.0.0
