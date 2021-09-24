@@ -1,5 +1,4 @@
 class ArtPiecesController < ApplicationController
-
   def new
     @artist = UserArtistsFacade.artist(current_user.id, params[:artist_id])
   end
@@ -46,7 +45,6 @@ class ArtPiecesController < ApplicationController
     BackendFacade.delete_image(params[:artist_id], image_id)
     redirect_to user_artist_path(current_user.id, params[:artist_id])
   end
-
 
   private
 

@@ -45,7 +45,7 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.update_artist_image(artist_id, image_id, artist_info)
+  def self.update_artist_image(artist_id, image_id, _artist_info)
     response = connection.put("/api/v1/artists/#{artist_id}/images/#{image_id}", image_info)
     JSON.parse(response.body, symbolize_names: true)
   end
@@ -56,9 +56,7 @@ class BackendService
 
   def self.find_public_images
     response = connection.get('/api/v1/public_images')
-    if response.body != ""
-      JSON.parse(response.body, symbolize_names: true)
-    end
+    JSON.parse(response.body, symbolize_names: true) if response.body != ''
   end
 
   def self.find_random_image
