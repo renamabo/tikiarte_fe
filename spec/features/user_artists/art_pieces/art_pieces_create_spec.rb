@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'art piece upload page' do
   before(:each) do
-    @user = GoogleUser.new( { id: 1, attributes: { email: 'test@test.com' } } )
+    @user = GoogleUser.new({ id: 1, attributes: { email: 'test@test.com' } })
     @artist = Artist.new('Tiki', 1)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
   end
@@ -14,13 +16,13 @@ describe 'art piece upload page' do
   xit 'can upload an image and redirect to artist show page once complete' do
     visit new_user_artist_art_piece_path(@user.id, @artist.id)
 
-    expect(page).to have_content("Upload an Art Piece")
-    expect(page).to have_content("Name Your New Art Piece:")
-    expect(page).to have_content("Describe Your Art Piece:")
+    expect(page).to have_content('Upload an Art Piece')
+    expect(page).to have_content('Name Your New Art Piece:')
+    expect(page).to have_content('Describe Your Art Piece:')
     expect(page).to have_field(:art_piece_title)
-    expect(page).to have_button("Create Art Piece")
+    expect(page).to have_button('Create Art Piece')
 
-    click_button "Create Art Piece"
+    click_button 'Create Art Piece'
 
     expect(current_path).to eq(user_artist_path(@user.id, @artist.id))
   end

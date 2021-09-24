@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ArtPiecesController < ApplicationController
   def new
     @artist = UserArtistsFacade.artist(current_user.id, params[:artist_id])

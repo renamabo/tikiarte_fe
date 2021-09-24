@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ArtPiecesFacade
   class << self
     def upload_request(input)

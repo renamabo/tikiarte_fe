@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Account Management Page', :vcr do
   before(:each) do
-    @user = GoogleUser.new( { id: 1, attributes: { email: 'test@test.com' } } )
+    @user = GoogleUser.new({ id: 1, attributes: { email: 'test@test.com' } })
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
   end

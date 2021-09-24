@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BackendService
   def self.connection
     Faraday.new('https://tikiarte-be.herokuapp.com')

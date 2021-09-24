@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UserArtistsFacade
   def self.create(input)
     artist_info = {

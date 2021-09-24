@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe BackendFacade do
@@ -16,7 +18,7 @@ RSpec.describe BackendFacade do
       user_id = 5
       google_user = BackendFacade.current_user(5)
       expect(google_user).to be_a(GoogleUser)
-      expect(google_user.email).to eq("jococopo@gmail.com")
+      expect(google_user.email).to eq('jococopo@gmail.com')
     end
   end
 

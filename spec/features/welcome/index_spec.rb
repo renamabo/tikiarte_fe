@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Welcome page' do
@@ -26,21 +28,21 @@ RSpec.describe 'Welcome page' do
       visit root_path
 
       OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
-        "provider" => "google_oauth2",
-        "uid" => "100000000000000000000",
-        "info" => {
-          "email" => "john@example.com"
-        },
-        "credentials" => {
-          "token" => "TOKEN",
-          :refresh_token => "refresh token"
-        }
-      })
-      Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
+                                                                           'provider' => 'google_oauth2',
+                                                                           'uid' => '100000000000000000000',
+                                                                           'info' => {
+                                                                             'email' => 'john@example.com'
+                                                                           },
+                                                                           'credentials' => {
+                                                                             'token' => 'TOKEN',
+                                                                             :refresh_token => 'refresh token'
+                                                                           }
+                                                                         })
+      Rails.application.env_config['omniauth.auth'] = OmniAuth.config.mock_auth[:google_oauth2]
 
       within('#button') do
-        expect(page).to have_button("Sign in with Google")
-        click_button "Sign in with Google"
+        expect(page).to have_button('Sign in with Google')
+        click_button 'Sign in with Google'
       end
       expect(current_path).to eq('/user/2/artists')
     end
@@ -49,10 +51,10 @@ RSpec.describe 'Welcome page' do
       visit root_path
 
       OmniAuth.config.mock_auth[:google_oauth2] = :invalid_credentials
-      Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
+      Rails.application.env_config['omniauth.auth'] = OmniAuth.config.mock_auth[:google_oauth2]
 
-      click_button "Sign in with Google"
-      expect(page).to have_content("Oops, something went wrong!")
+      click_button 'Sign in with Google'
+      expect(page).to have_content('Oops, something went wrong!')
     end
   end
 end

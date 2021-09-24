@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class GoogleUser
   attr_reader :id, :email
 

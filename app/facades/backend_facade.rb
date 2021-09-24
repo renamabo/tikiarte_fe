@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BackendFacade
   def self.user(user_info)
     response = BackendService.create_or_find_user(user_info)
@@ -24,7 +26,7 @@ class BackendFacade
   def self.update_image(input, id)
     image_info = {
       image: {
-        status: input[:status],
+        status: input[:status]
       }
     }
     BackendService.update_artist_image(input[:artist_id], id, image_info)
