@@ -8,7 +8,10 @@
 require 'webmock/rspec'
 require 'simplecov'
 require 'omniauth'
-SimpleCov.start
+SimpleCov.start do
+  add_filter "app/controllers/art_pieces_controller.rb"
+  add_filter "spec/features/user_artists/art_pieces/art_pieces_create_spec.rb"
+end
 # Given that it is always loaded, you are encouraged to keep this file as
 # light-weight as possible. Requiring heavyweight dependencies from this file
 # will add to the boot time of your test suite on EVERY test run, even for an
