@@ -8,12 +8,7 @@ RSpec.describe "public gallery", :vcr do
   end
 
   describe 'display' do
-    xit 'shows header' do
-      mock_response = "{\"data\":[{\"id\":1,\"attributes\":{\"status\":\"public\",\"url\":\"/app/images/face.png\",\"artist_id\":1}},{\"id\":2,\"attributes\":{\"status\":\"public\",\"url\":\"/app/images/Reggie.JPG\",\"artist_id\":2}},{\"id\":3,\"attributes\":{\"status\":\"public\",\"url\":\"/app/images/turlte.jpg\",\"artist_id\":3}}]}"
-
-      allow_any_instance_of(Faraday::Connection).to receive(:get).and_return(Faraday::Response.new)
-      allow_any_instance_of(Faraday::Response).to receive(:body).and_return(mock_response)
-
+    it 'shows header' do
       visit public_gallery_index_path
 
       within('#header') do
@@ -21,9 +16,8 @@ RSpec.describe "public gallery", :vcr do
       end
 
       within('#images') do
-        expect(page).to have_css("img[src*='/app/images/face.png']")
-        expect(page).to have_css("img[src*='/app/images/Reggie.JPG']")
-        expect(page).to have_css("img[src*='/app/images/turlte.jpg']")
+        expect(page).to have_css("img[src*='https://tikiarte-dev.s3.us-east-2.amazonaws.com/uploads/fa383404-d62d-4e55-af14-e7c3ed61f5a5?response-content-disposition=inline%3B%20filename%3D%22sub-buzz-11577-1538631066-1.jpeg%22%3B%20filename%2A%3DUTF-8%27%27sub-buzz-11577-1538631066-1.jpeg']")
+        expect(page).to have_css("img[src*='https://tikiarte-dev.s3.us-east-2.amazonaws.com/uploads/673e4c60-9d31-4cab-9393-2ec6f98df200?response-content-disposition=inline%3B%20filename%3D%22988fb9e5bb6aaf57f9825a677549343c.jpeg%22%3B%20filename%2A%3DUTF-8%27%27988fb9e5bb6aaf57f9825a677549343c.jpeg']")
       end
     end
   end

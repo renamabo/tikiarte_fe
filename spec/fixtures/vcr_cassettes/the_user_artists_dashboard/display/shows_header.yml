@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:04:18 GMT
+      - Thu, 23 Sep 2021 23:51:10 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - feac4349-41d6-4826-b037-7fef2fe39230
+      - b83d82f3-3ee6-43fc-b8f1-301a7855b4d3
       X-Runtime:
-      - '0.004851'
+      - '0.005797'
       Transfer-Encoding:
       - chunked
       Via:
@@ -41,7 +41,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"director_artist","attributes":{"email":"dbrophy720@gmail.com","token":"ya29.a0ARrdaM-MU1xt0-bl8rIbvILDV-hjaU6G7Qu1aTGOvYVJ0flxuV3K4na62g-r-gHS8AtytbUm4lI3xsCNwuApcEjkEv_nfR786EiuVAzTg9Je165Z1b7QYzYmP8aTN35MCvSWGcgdHUxRh0H9-cyXBDcjgqLx","google_id":"100103662693449910767","artists":[{"id":1,"username":"tiki","password_digest":"$2a$12$kHhvRHTsr1tdungcP/vlUOTF8PeSwjj6Cjisi0pWLbldB9P2PhlFq","director_id":1,"created_at":"2021-09-22T21:58:06.985Z","updated_at":"2021-09-22T21:58:06.985Z"},{"id":6,"username":"artist_1","password_digest":"$2a$12$0ri84ynKZgnBB5SwMXSN/eJCTac0LuR1NUPDtzcwAh.DomyjAf1ki","director_id":1,"created_at":"2021-09-23T20:58:38.448Z","updated_at":"2021-09-23T20:58:38.448Z"}]}}}'
-  recorded_at: Thu, 23 Sep 2021 21:04:18 GMT
+  recorded_at: Thu, 23 Sep 2021 23:51:11 GMT
 - request:
     method: get
     uri: https://tikiarte-be.herokuapp.com/api/v1/directors/1/artists/1
@@ -63,7 +63,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:04:18 GMT
+      - Thu, 23 Sep 2021 23:51:11 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -73,9 +73,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 467ae600-7753-4989-9e98-f9e538829298
+      - e8187a45-c3bf-467d-af5a-b240dfdca2f1
       X-Runtime:
-      - '0.003086'
+      - '0.004336'
       Transfer-Encoding:
       - chunked
       Via:
@@ -83,7 +83,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"artist","attributes":{"username":"tiki","password_digest":"$2a$12$kHhvRHTsr1tdungcP/vlUOTF8PeSwjj6Cjisi0pWLbldB9P2PhlFq","director_id":1}}}'
-  recorded_at: Thu, 23 Sep 2021 21:04:19 GMT
+  recorded_at: Thu, 23 Sep 2021 23:51:11 GMT
 - request:
     method: get
     uri: https://tikiarte-be.herokuapp.com/api/v1/artists/1/images
@@ -105,25 +105,25 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:04:19 GMT
+      - Thu, 23 Sep 2021 23:51:11 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"abca49d80e02ae8cbb03ca7483617cbe"
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5fa902ac-d2d2-4ead-af0a-2aa00eff2d1e
+      - 55991144-386a-4916-a062-0abdfb2f1251
       X-Runtime:
-      - '0.009389'
+      - '0.005362'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"artist_image","attributes":{"username":"tiki","images":[]}}}'
-  recorded_at: Thu, 23 Sep 2021 21:04:19 GMT
+      string: '{"data":[]}'
+  recorded_at: Thu, 23 Sep 2021 23:51:11 GMT
 recorded_with: VCR 6.0.0

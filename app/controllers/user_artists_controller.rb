@@ -15,7 +15,7 @@ class UserArtistsController < ApplicationController
       UserArtistsFacade.create(artist_params)
       redirect_to user_artists_path(current_user.id)
     else
-      # flash[:danger] = 'Passwords do not match!'
+      flash[:danger] = 'Passwords do not match!'
       redirect_to new_user_artist_path(current_user.id)
     end
   end
