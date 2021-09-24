@@ -1,0 +1,8 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+  AllCops:
+    Exclude:
+    - 'app/controllers/art_pieces_controller.rb'
+    - 'app/facades/backend_facade.rb'
