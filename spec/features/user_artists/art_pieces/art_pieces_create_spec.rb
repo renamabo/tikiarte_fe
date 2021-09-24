@@ -11,7 +11,7 @@ describe 'art piece upload page', :vcr do
   # Add options to upload image (file drag and drop and/or file directory upload)
   # Add Upload or save button
   # Redirect to artist show page after upload complete
-  it 'can upload an image and redirect to artist show page once complete' do
+  xit 'can upload an image and redirect to artist show page once complete' do
     visit new_user_artist_art_piece_path(@user.id, @artist.id)
 
     expect(page).to have_content("Upload an Art Piece")
